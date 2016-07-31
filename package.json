@@ -5,11 +5,13 @@
   "main": "lib/charting-musical-culture.js",
   "scripts": {
     "build": "webpack --mode=build",
+    "watch": "babel --watch src --source-maps true --extensions .js --out-dir lib",
     "dev": "webpack --progress --colors --watch --mode=dev",
     "test": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
   },
   "devDependencies": {
     "babel": "6.3.13",
+    "babel-cli": "^6.11.4",
     "babel-core": "6.1.18",
     "babel-loader": "6.1.0",
     "babel-plugin-add-module-exports": "0.1.2",
@@ -36,6 +38,8 @@
   "homepage": "https://github.com/partials-music/charting-musical-culture",
   "dependencies": {
     "massive": "^2.4.0",
-    "moment": "^2.14.1"
+    "moment": "^2.14.1",
+    "request": "^2.74.0",
+    "wikidata-sdk": "^3.2.0"
   }
 }
